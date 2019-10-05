@@ -9,10 +9,10 @@
 		"build": "gatsby build"
 	},
 	"dependencies": {
-		"gatsby": "^2.15.28",
+		"gatsby": "^2.15.29",
 		"gatsby-plugin-layout": "^1.1.10",
 		"gatsby-theme-bl-simple": "^1.0.0",
-		"react": "^16.10.0",
-		"react-dom": "^16.10.0"
+		"react": "^16.10.2",
+		"react-dom": "^16.10.2"
 	}
 }
