@@ -1,11 +1,11 @@
 import { createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles'
 // eslint-disable-next-line
-import { grey, indigo, lightBlue, pink } from '@material-ui/core/colors'
+import { cyan, grey, indigo, lightBlue, pink } from '@material-ui/core/colors'
 
 let MyTheme = createMuiTheme({
 	palette: {
 		primary: {
-			main: lightBlue[500]
+			main: cyan[500]
 		},
 		secondary: {
 			main: pink[500]

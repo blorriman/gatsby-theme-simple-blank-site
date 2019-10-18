@@ -7,6 +7,10 @@ import MyTheme from '../utils/myTheme'
 const theme = MyTheme
 
 export default ({ children, location }) => {
+	let fullwidth = false
+	if (location.pathname === '/') {
+		fullwidth = true
+	}
 	return (
 		<StaticQuery
 			query={graphql`
@@ -15,6 +19,12 @@ export default ({ children, location }) => {
 						siteMetadata {
 							title
 							author
+							social {
+								facebook
+								twitter
+								linkedin
+								instagram
+							}
 						}
 					}
 				}
@@ -24,7 +34,9 @@ export default ({ children, location }) => {
 					theme={theme}
 					siteTitle={data.site.siteMetadata.title}
 					author={data.site.siteMetadata.author}
+					social={data.site.siteMetadata.social}
 					location={location}
+					fullwidth={fullwidth}
 				>
 					{children}
 				</Layout>

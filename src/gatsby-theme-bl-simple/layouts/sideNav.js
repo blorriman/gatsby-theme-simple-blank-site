@@ -52,21 +52,19 @@ const SideNav = ({ pathname, handleDrawerClose }) => {
 				className={classes.root}
 			>
 				{pathname !== '/' ? (
-					<Hidden smDown>
-						<Link to='/' className={classes.link} onClick={handleDrawerClose}>
-							<ListItem button divider>
-								<ListItemIcon>
-									<Icon
-										path={mdiHome}
-										title='Home'
-										size={1.5}
-										color={grey[500]}
-									/>
-								</ListItemIcon>
-								<ListItemText primary='Home' />
-							</ListItem>
-						</Link>
-					</Hidden>
+					<Link to='/' className={classes.link} onClick={handleDrawerClose}>
+						<ListItem button divider>
+							<ListItemIcon>
+								<Icon
+									path={mdiHome}
+									title='Home'
+									size={1.5}
+									color={grey[500]}
+								/>
+							</ListItemIcon>
+							<ListItemText primary='Home' />
+						</ListItem>
+					</Link>
 				) : (
 					undefined
 				)}
