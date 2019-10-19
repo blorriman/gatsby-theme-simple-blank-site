@@ -1,24 +1,27 @@
 {
-	"name": "example",
+	"private": true,
+	"name": "site",
 	"version": "1.0.0",
-	"main": "index.js",
-	"author": "Bob Lorriman <blorriman@gmail.com> (@blorriman)",
 	"license": "MIT",
 	"scripts": {
-		"develop": "gatsby develop",
 		"build": "gatsby build",
+		"develop": "gatsby develop",
 		"clean": "gatsby clean"
 	},
 	"dependencies": {
+		"@material-ui/core": "^4.5.1",
+		"@material-ui/icons": "^4.5.1",
+		"@mdi/js": "^4.5.95",
+		"@mdi/react": "^1.2.1",
 		"gatsby": "^2.15.28",
 		"gatsby-background-image": "^0.8.15",
 		"gatsby-image": "^2.2.27",
 		"gatsby-plugin-sharp": "^2.2.29",
 		"gatsby-source-filesystem": "^2.1.31",
-		"gatsby-transformer-sharp": "^2.2.21",
 		"gatsby-theme-bl-simple": "1.0.6",
-		"react": "^16.10.2",
-		"react-dom": "^16.10.2"
+		"gatsby-transformer-sharp": "^2.2.21",
+		"react": "^16.10.1",
+		"react-dom": "^16.10.1"
 	},
 	"devDependencies": {
 		"gatsby-plugin-layout": "^1.1.10"
