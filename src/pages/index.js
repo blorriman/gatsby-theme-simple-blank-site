@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
@@ -55,10 +56,10 @@ export default ({ data }) => {
 					container
 					direction='column'
 					justify='center'
-					alignItems='center'
+					// alignItems='center'
 					className={classes.backgroundGrid}
 				>
-					<Grid item xs={12} sm={10} justify='center'>
+					<Grid item xs={12} sm={10}>
 						<Typography variant='h2' align='center' gutterBottom>
 							Hello Gatsby
 						</Typography>

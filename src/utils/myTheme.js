@@ -11,15 +11,15 @@ let MyTheme = createMuiTheme({
 			main: pink[500]
 		},
 		text: {
-			primary: grey[500],
+			primary: grey[700],
 			secondary: grey[600],
 			disabled: grey[400]
 		}
 	},
-	// type: 'dark', //this is not working
+	//type: 'dark', //this is not working
 	typography: {
 		// Tell Material-UI what's the font-size on the html element is.
-		fontSize: 14
+		fontSize: 12
 	}
 })
 
