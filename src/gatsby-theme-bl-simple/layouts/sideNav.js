@@ -28,6 +28,7 @@ import {
 } from '@material-ui/core'
 import { ExpandLess, ExpandMore } from '@material-ui/icons'
 import { blue, cyan, deepPurple, grey, purple } from '@material-ui/core/colors'
+import MyTheme from '../../utils/myTheme'
 
 const useStyles = makeStyles(theme => ({
 	root: {
@@ -42,6 +43,7 @@ const useStyles = makeStyles(theme => ({
 
 const SideNav = ({ pathname, handleDrawerClose }) => {
 	const classes = useStyles()
+	const theme = MyTheme
 	const [open, setOpen] = React.useState(false)
 
 	return (
@@ -51,7 +53,7 @@ const SideNav = ({ pathname, handleDrawerClose }) => {
 				aria-labelledby='nested-list-subheader'
 				className={classes.root}
 			>
-				{pathname !== '/' ? (
+				{pathname !== '/' && (
 					<Link to='/' className={classes.link} onClick={handleDrawerClose}>
 						<ListItem button divider>
 							<ListItemIcon>
@@ -59,17 +61,15 @@ const SideNav = ({ pathname, handleDrawerClose }) => {
 									path={mdiHome}
 									title='Home'
 									size={1.5}
-									color={grey[500]}
+									color={theme.palette.primary.main}
 								/>
 							</ListItemIcon>
 							<ListItemText primary='Home' />
 						</ListItem>
 					</Link>
-				) : (
-					undefined
 				)}
 
-				{pathname !== '/about' ? (
+				{pathname !== '/about' && (
 					<Link
 						to='/about'
 						className={classes.link}
@@ -81,17 +81,15 @@ const SideNav = ({ pathname, handleDrawerClose }) => {
 									path={mdiInformationOutline}
 									title='About'
 									size={1.5}
-									color={grey[500]}
+									color={theme.palette.primary.main}
 								/>
 							</ListItemIcon>
 							<ListItemText primary='About' />
 						</ListItem>
 					</Link>
-				) : (
-					undefined
 				)}
 
-				{pathname !== '/resources' ? (
+				{pathname !== '/resources' && (
 					<Link
 						to='/resources'
 						className={classes.link}
@@ -103,14 +101,12 @@ const SideNav = ({ pathname, handleDrawerClose }) => {
 									path={mdiLibrary}
 									title='Resources'
 									size={1.5}
-									color={grey[500]}
+									color={theme.palette.primary.main}
 								/>
 							</ListItemIcon>
 							<ListItemText primary='Resources' />
 						</ListItem>
 					</Link>
-				) : (
-					undefined
 				)}
 			</List>
 		</>

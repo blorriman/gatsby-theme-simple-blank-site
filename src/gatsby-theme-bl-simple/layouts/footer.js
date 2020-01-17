@@ -47,7 +47,7 @@ const Footer = ({ author, social }) => {
 	return (
 		<footer className={classes.root}>
 			<Grid container spacing={4}>
-				<Grid item xs={12} sm={4}>
+				<Grid item xs={12} sm={4} align='center'>
 					<Link to='/contact' className={classes.link}>
 						<Button color='primary' size='small' className={classes.button}>
 							Contact
@@ -55,7 +55,7 @@ const Footer = ({ author, social }) => {
 					</Link>
 				</Grid>
 
-				<Grid item xs={12} sm={4}>
+				<Grid item xs={12} sm={4} align='center'>
 					<Typography
 						variant='body1'
 						align='center'
@@ -123,8 +123,8 @@ const Footer = ({ author, social }) => {
 					</Typography>
 				</Grid>
 
-				<Grid item xs={12} sm={4}>
-					<Typography variant='body1' align='right' className={classes.type}>
+				<Grid item xs={12} sm={4} align='center'>
+					<Typography variant='body1' className={classes.type}>
 						{author} © {new Date().getFullYear()}
 					</Typography>
 				</Grid>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import { Link } from 'gatsby'
+import Icon from '@mdi/react'
+import { mdiChevronLeftCircle } from '@mdi/js'
 import {
 	AppBar,
 	Container,
@@ -11,8 +12,6 @@ import {
 	makeStyles
 } from '@material-ui/core'
 import { ThemeProvider } from '@material-ui/styles'
-import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
-import HomeIcon from '@material-ui/icons/Home'
 import './styles.css'
 
 import Header from './header'
@@ -26,7 +25,6 @@ const useStyles = makeStyles(theme => ({
 		display: 'flex',
 		flexDirection: 'column',
 		minHeight: 'calc(100vh - 175px)',
-		// margin: theme.spacing(-1),
 		marginLeft: theme.spacing(-1),
 		marginRight: theme.spacing(-1),
 		marginTop: theme.spacing(-1),
@@ -122,16 +120,13 @@ const Layout = ({
 				>
 					<Hidden smUp>
 						<div className={classes.drawerHeader}>
-							<Link to='/' onClick={handleDrawerClose}>
-								{pathname !== '/' && (
-									<IconButton>
-										<HomeIcon />
-									</IconButton>
-								)}
-							</Link>
-
 							<IconButton onClick={handleDrawerClose}>
-								<ChevronLeftIcon />
+								<Icon
+									path={mdiChevronLeftCircle}
+									title='close'
+									size={1.5}
+									color={theme.palette.primary.main}
+								/>
 							</IconButton>
 						</div>
 						<Divider className={classes.mobileDivider} />
